@@ -1,67 +1,29 @@
-# SHOP
+# Your first Polymer element
 
-### Setup
+This repo goes with the [Build your first Polymer element tutorial](https://www.polymer-project.org/2.0/start/first-element/intro).
 
-##### Prerequisites
+## Running the tutorial code
 
-Install [polymer-cli](https://github.com/Polymer/polymer-cli):
+You'll need to install some command-line tools to manage dependencies and to run the demo.
 
-    npm install -g polymer-cli
+1.  Download and install Node version 6.x or 7.x from [https://nodejs.org/](https://nodejs.org/). Node includes the node package manager command, `npm`.
 
+2.  Install `bower` and the Polymer CLI:
 
-##### Setup
-    # Using CLI
-    mkdir shop
-    cd shop
-    polymer init shop
+        npm install -g bower polymer-cli
 
-    # Or cloning direct from GitHub
-    git clone https://github.com/Polymer/shop.git
-    cd shop
-    bower install
+3.  Clone this repo:
 
-### Start the development server
+        https://github.com/PolymerLabs/polymer-2-first-element.git
+        
+4.  Change directory to your local repo and install dependencies with `bower`:
 
-    polymer serve
+        cd polymer-2-first-element
+        bower install
+        
+5.  To preview your element, run the Polymer development server from the repo directory:
 
-### Run web-component-tester tests
-
-    polymer test
-
-### Build
-
-Build presets provide an easy way to define common build configurations in your `polymer.json` file. There are 2 build presets we put in `polymer.json` file in Shop:
-
-**es5-bundled**
-
-- js: {minify: true, compile: true}
-- css: {minify: true}
-- html: {minify: true}
-- bundle: true
-- addServiceWorker: true
-- addPushManifest: true
-- insertPrefetchLinks: true
-
-**es6-unbundled**
-
-- js: {minify: true, compile: false}
-- css: {minify: true}
-- html: {minify: true}
-- bundle: false
-- addServiceWorker: true
-- addPushManifest: true
-- insertPrefetchLinks: true
-
-Run the command to build the presets:
-
-    polymer build
-
-### Test the build
-
-This command serves the `es5-bundled` build version of the app:
-
-    polymer serve build/es5-bundled
-
-This command serves the `es6-unbundled` build version of the app:
-
-    polymer serve build/es6-unbundled
+        polymer serve
+        
+    Open `localhost:8080/components/icon-toggle/demo/` in your browser. (Note that the path uses `icon-toggle`—the 
+    component name listed in this element's `bower.json` file—rather than the actual directory name.) 
